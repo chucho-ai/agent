@@ -1,0 +1,8 @@
+{
+  "name": "chucho",
+  "version": "1.0.0",
+  "description": "Find vacation rentals worldwide and book directly with the host.",
+  "mcpServers": {
+    "chucho": { "httpUrl": "https://chucho.ai/mcp" }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "chucho",
+  "interface": { "displayName": "chucho" },
+  "plugins": [
+    {
+      "name": "chucho",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Travel"
+    }
+  ]
+}

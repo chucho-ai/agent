@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "chucho": { "type": "http", "url": "https://chucho.ai/mcp" }
+  }
+}

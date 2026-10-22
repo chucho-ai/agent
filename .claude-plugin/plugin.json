@@ -1,0 +1,21 @@
+{
+  "name": "chucho",
+  "displayName": "chucho — Book Direct",
+  "description": "Find vacation rentals worldwide by describing the trip, see photo cards, check host prices and book directly with the host.",
+  "author": {
+    "name": "Pathos Inc",
+    "email": "hello@chucho.ai",
+    "url": "https://chucho.ai"
+  },
+  "homepage": "https://chucho.ai/install.md",
+  "repository": "https://github.com/chucho-ai/agent",
+  "keywords": [
+    "travel",
+    "vacation rentals",
+    "holiday homes",
+    "book direct",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://chucho.ai/privacy/",
+  "icon": ".claude-plugin/icon.png"
+}

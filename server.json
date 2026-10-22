@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.chucho/chucho",
+  "title": "chucho — Book Direct",
+  "description": "Find vacation rentals worldwide by describing the trip, check host prices and book direct.",
+  "version": "1.0.0",
+  "websiteUrl": "https://chucho.ai/install.md",
+  "repository": { "url": "https://github.com/chucho-ai/agent", "source": "github" },
+  "remotes": [{ "type": "streamable-http", "url": "https://chucho.ai/mcp" }]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "chucho",
+  "description": "chucho: find vacation homes and book directly with the host.",
+  "owner": { "name": "Pathos Inc", "email": "hello@chucho.ai" },
+  "plugins": [
+    {
+      "name": "chucho",
+      "source": "./",
+      "description": "Vacation-home search with photo cards, host quotes and direct booking links.",
+      "category": "travel"
+    }
+  ]
+}

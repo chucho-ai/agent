@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chucho",
+  "version": "1.0.0",
+  "description": "Find vacation rentals worldwide by describing the trip, see photo cards, check host prices and book directly with the host.",
+  "author": { "name": "Pathos Inc", "email": "hello@chucho.ai", "url": "https://chucho.ai" },
+  "homepage": "https://chucho.ai/install.md",
+  "keywords": ["vacation rentals", "holiday homes", "places to stay", "book direct"]
+}

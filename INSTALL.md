@@ -1,8 +1,10 @@
 # Install chucho in your agent
 
 Chucho finds vacation homes for the trip a traveler describes and sends them to book directly
-with the host. It is one public MCP server plus one skill. Neither needs an account or API key.
+with the host. Install the published ChatGPT plugin for bundled tools and a travel skill,
+or connect the public MCP server and skill in another agent. No Chucho account or API key is required.
 
+- ChatGPT: [Install chucho — Book Direct](https://chatgpt.com/plugins/plugin_asdk_app_6abf4cf827fc819197bfe6ccf5a61927)
 - MCP server: `https://chucho.ai/mcp` (Streamable HTTP, no auth)
 - Skill: https://chucho.ai/.well-known/agent-skills/chucho/SKILL.md
 - Bundle (skill, MCP config and plugin manifests): https://github.com/chucho-ai/agent
@@ -12,6 +14,13 @@ with the host. It is one public MCP server plus one skill. Neither needs an acco
 Your user wants Chucho. Set up both MCP and the skill wherever your host supports them.
 Use a bundled install below when it supplies both; otherwise complete both steps separately.
 Check what is already installed first, and keep going after the first successful step.
+
+**In ChatGPT, use the [published plugin](#chatgpt).** Its installation bundles the MCP
+tools and `find-vacation-home` skill. Use your host's plugin installation flow if available;
+otherwise give the user the direct listing link and ask them to select **Install plugin**.
+Complete any user confirmation required by the host, then verify the installed plugin.
+Do not create a duplicate custom MCP plugin or a separate personal skill. Opening the
+listing alone is not installation. The separate setup steps below apply to other hosts.
 
 1. **Connect MCP**: add `https://chucho.ai/mcp` as a remote HTTP server named `chucho`
    using the matching command below. Authentication is not required.
@@ -45,40 +54,30 @@ URL `https://chucho.ai/mcp`. Search results appear as photo cards.
 
 ## ChatGPT
 
-The submitted Chucho app is pending approval and is not yet a public install path.
-You can connect the public MCP server now wherever your account and workspace permit custom
-MCP servers, and add the skill in ChatGPT desktop.
+[Install chucho — Book Direct in ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6abf4cf827fc819197bfe6ccf5a61927).
 
-**Connect the MCP server:**
+The published plugin includes the Chucho MCP tools and the `find-vacation-home` skill.
+Installation sets up both together; no custom MCP URL, developer mode, API key, or
+separate skill-creator setup is needed.
 
-1. Open [ChatGPT Plugins](https://chatgpt.com/plugins), select the plus button, then
-   **Add custom MCP server**.
-2. Set the name to `chucho`, describe it as vacation-home search and direct booking,
-   and enter `https://chucho.ai/mcp` as the public server URL.
-3. Choose **No authentication**, review the connection warning, then select
-   **Create as a plugin**. Install the resulting personal plugin.
-4. Start a new chat, select the plugin with `@`, and verify that `search_properties`
-   runs a search and returns homes. If custom MCP setup is unavailable, ask your workspace
-   administrator about access; the pending directory app does not bypass that restriction.
+1. Open the link above and sign in to your ChatGPT account if prompted.
+2. Select **Install plugin** and complete any confirmation ChatGPT shows.
+3. Start a new chat, type `@`, and select **chucho — Book Direct** from the picker.
+4. Describe your trip, for example: “Find a vacation home for six people with a private
+   pool” or “Ayúdame a encontrar una casa de vacaciones para mi familia.”
+5. Confirm that ChatGPT uses Chucho to search and returns homes with photos, property
+   details, and host booking links. If Chucho is already installed, start at step 3.
 
-**Add the skill in ChatGPT desktop:** open Work mode and send this prompt to the built-in
-skill creator:
+You can also find the listing by searching **chucho — Book Direct** in
+[ChatGPT Plugins](https://chatgpt.com/plugins). If installation is unavailable in a
+managed workspace, ask your administrator to enable the plugin.
 
-```text
-@skill-creator Create a personal skill named chucho using the complete SKILL.md at
-https://chucho.ai/.well-known/agent-skills/chucho/SKILL.md.
-Preserve its instructions and install it for reuse. Then verify that chucho is available
-in Skills. I have also connected the chucho MCP server at https://chucho.ai/mcp.
-```
+If you previously created a personal Chucho MCP plugin or skill, select the published
+**chucho — Book Direct** plugin for this setup. After verifying it works, you can remove
+any duplicate personal setup you no longer use.
 
-Start a new chat, select `@chucho` from the skill picker, and confirm that the skill loads
-and uses the connected Chucho tools. Standalone skill availability varies by surface;
-this desktop setup is separate from connecting MCP. In a chat without skill installation,
-you can still ask ChatGPT to read the [skill instructions](https://chucho.ai/.well-known/agent-skills/chucho/SKILL.md)
-for that conversation, without claiming that they were installed.
-
-Official setup references: [custom MCP connections](https://developers.openai.com/plugins/deploy/connect-chatgpt)
-and [skills in ChatGPT and Codex](https://learn.chatgpt.com/docs/build-skills).
+Chucho helps you find homes and reach their hosts. Confirm final availability, prices,
+and booking terms with the host; installing or using the plugin does not make a booking.
 
 ## OpenAI Codex
 
